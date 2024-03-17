@@ -27,7 +27,7 @@ const Register = () => {
         setMessage("Submitting...");
 
         try {
-            const res = await axios.post(`${import.meta.env.VITE_SERVER_URL}users/register`, {
+            const res = await axios.post(`${import.meta.env.VITE_SERVER_URL}users/register/`, {
                 name,
                 email,
                 password,
