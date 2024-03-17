@@ -58,15 +58,6 @@ router.post("/register", async (req, res) => {
     }
 });
 
-router.get("/", async (req, res) => {
-    try {
-        const allUsers = await User.find();
-        return res.status(201).json(allUsers)
-    } catch (error) {
-        res.status(500).json({ error: 'Something went wrong' })
-    }
-})
-
 //login
 router.post("/login", async (req, res) => {
     try {
